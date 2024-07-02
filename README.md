@@ -7,7 +7,7 @@ This addon is designed to help you easily create and apply a PlayStation 1 (PS1)
 
 The Kwobbler addon streamlines the process of achieving this distinctive look by providing you with a ready-to-use geometry node setup that can be quickly applied to any mesh in your scene.
 
-### Features
+## Features
 
 - **Automatic Node Group Import**: The addon automatically imports the necessary geometry node group for the PS1 effect.
   
@@ -15,7 +15,7 @@ The Kwobbler addon streamlines the process of achieving this distinctive look by
   
 - **Customizable**: Adjust the node group's parameters to fine-tune the PS1 effect to your liking.
 
-### Installation
+## Installation
 
 To install this add-on in Blender, follow these steps:
 
@@ -29,5 +29,5 @@ To install this add-on in Blender, follow these steps:
 
 - Select the add-on file and click the "Install Add-on from File" button.
 
-- ## Issues
+## Issues
 If you're having trouble integrating this code into your addon, [open a new issue](https://github.com/kents00/Kwobbler/issues). As the module continues to develop, it will be easier for more developers to integrate updates and improve blender's overall user performance!
