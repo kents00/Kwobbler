@@ -1,7 +1,7 @@
 # Kwobbler
 **"Adds PS1 effect into your meshes"**
 
-![dhnugod-2fa57bf5-d85e-4c10-8ba8-06304a69e1a6 (1)](https://github.com/kents00/Kwobbler/assets/69900896/3a31980f-de29-422b-8ec9-c4c9d2e90b4a)
+![My Video-1](https://github.com/user-attachments/assets/b93bd55a-b09a-4737-84b9-3da0f324818f)
 
 This addon is designed to help you easily create and apply a PlayStation 1 (PS1) style effect to your 3D meshes within Blender. The PS1 aesthetic, characterized by low polygon counts, vertex snapping, and pixelated textures, has a nostalgic charm and is popular in various creative projects, from indie games to retro-inspired artworks.
 
