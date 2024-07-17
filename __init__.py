@@ -68,6 +68,7 @@ class KWobbler(Operator):
             return {'CANCELLED'}
 
         if self.import_node_group("Kwobbler") == {'CANCELLED'}:
+            self.report({'WARNING'}, "Make sure you select the Scene Collection")
             return {'CANCELLED'}
 
         if self.create_plane_with_node_group("Kwobbler") == {'CANCELLED'}:
