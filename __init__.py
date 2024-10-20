@@ -21,8 +21,8 @@ class KWobbler(Operator):
     bl_label = "SETUP PS1"
 
     def __init__(self):
-        self.source_file = os.path.join(os.path.dirname(__file__), "..", "Kwobbler/data", "Kwobbler.blend")
-    
+        self.source_file = os.path.join(os.path.dirname(__file__), "..", "Kwobbler-main/data", "Kwobbler.blend")
+
     def import_file(self):
         # Check if the file exists
         if not os.path.isfile(self.source_file):
@@ -75,7 +75,7 @@ class KWobbler(Operator):
         if self.create_plane_with_node_group("Kwobbler") == {'CANCELLED'}:
             self.report({'WARNING'}, "Make sure you select the Scene Collection")
             return {'CANCELLED'}
-        
+
         return {'FINISHED'}
 
 class KWobblerPanel(Panel):
