@@ -11,8 +11,9 @@ bl_info = {
     "version": (1, 0, 0),
     "author": "Kent Edoloverio",
     "description": "Adds PS1 effect into your meshes",
-    "wiki_url": "",
-    "tracker_url": "",
+    "warning" : "Make sure no objects are selected in your collection, click on the Scene Collection in the outliner, and click the Setup PS1 button in the Kwobbler panel.",
+    "wiki_url": "https://kentedoloverio.gumroad.com/l/kwobbler",
+    "tracker_url": "https://github.com/kents00/Kwobbler/issues",
 }
 
 class KWobbler(Operator):
