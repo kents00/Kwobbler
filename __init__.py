@@ -18,10 +18,27 @@ bl_info = {
 class KWobbler(Operator):
     bl_idname = "geonode.append_ps1_nodes"
     bl_label = "SETUP PS1"
+    bl_options = {'REGISTER', 'UNDO'}
 
-    def __init__(self):
+    def execute(self, context):
+        if context.selected_objects:
+            self.report({'WARNING'}, "Please deselect all objects in the Scene Collection before running this operator.")
+            return {'CANCELLED'}
+
         self.source_file = os.path.join(os.path.dirname(__file__), "..", "Kwobbler/data", "Kwobbler.blend")
-    
+
+        if self.import_file() == {'CANCELLED'}:
+            return {'CANCELLED'}
+
+        if self.import_node_group("Kwobbler") == {'CANCELLED'}:
+            self.report({'WARNING'}, "Make sure you select the Scene Collection")
+            return {'CANCELLED'}
+
+        if self.create_plane_with_node_group("Kwobbler") == {'CANCELLED'}:
+            return {'CANCELLED'}
+
+        return {'FINISHED'}
+
     def import_file(self):
         # Check if the file exists
         if not os.path.isfile(self.source_file):
@@ -49,6 +66,10 @@ class KWobbler(Operator):
 
         bpy.ops.mesh.primitive_plane_add(size=1)
         plane = bpy.context.object
+
+        if plane.name not in bpy.context.scene.collection.objects:
+            bpy.context.scene.collection.objects.link(plane)
+
         collection.objects.link(plane)
         bpy.context.scene.collection.objects.unlink(plane)
 
@@ -61,18 +82,6 @@ class KWobbler(Operator):
             return {'CANCELLED'}
 
         self.report({'INFO'}, "Plane created and node group assigned.")
-        return {'FINISHED'}
-
-    def execute(self, context):
-        if self.import_file() == {'CANCELLED'}:
-            return {'CANCELLED'}
-
-        if self.import_node_group("Kwobbler") == {'CANCELLED'}:
-            return {'CANCELLED'}
-
-        if self.create_plane_with_node_group("Kwobbler") == {'CANCELLED'}:
-            return {'CANCELLED'}
-        
         return {'FINISHED'}
 
 class KWobblerPanel(Panel):
