@@ -8,7 +8,7 @@ bl_info = {
     "blender": (4, 5, 0),
     "category": "3D View",
     "location": "3D View > Kwobbler",
-    "version": (2, 0, 0),
+    "version": (2, 1, 0),
     "author": "Kent Edoloverio",
     "description": "Adds PS1 effect into your meshes",
     "warning" : "Make sure no objects are selected in your collection, click on the Scene Collection in the outliner, and click the Setup PS1 button in the Kwobbler panel.",
