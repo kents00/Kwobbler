@@ -17,6 +17,9 @@ The Kwobbler addon streamlines the process of achieving this distinctive look by
   
 - **Customizable**: Adjust the node group's parameters to fine-tune the PS1 effect to your liking.
 
+### Watch this Youtube Tutorial on how to use this addon
+[![Watch on YouTube](https://img.youtube.com/vi/JNI268K6VCQ/0.jpg)](https://www.youtube.com/watch?v=JNI268K6VCQ)
+
 ## Installation
 
 To install this add-on in Blender, follow these steps:
